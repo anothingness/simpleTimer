@@ -1,0 +1,80 @@
+<!-- 
+fileName: simpleTimer_v0.html 
+date: 1 December 2017
+description: counts the number of seconds elapsed
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Meta data for the web page goes in header -->
+<meta charset="UTF-8">
+<title>Simple Timer (v0)</title>
+</head>
+<!-- Page content goes in between body tags -->
+<body onload="testFunction()">
+	<!-- Display information about the app -->
+	<h1>Simple Timer</h1>
+	<h3>Version 0</h3>
+	<p>Show the number of seconds elapsed.</p>
+	<!-- Display startButton by default -->
+	<input 	type="button" 
+			id="startButton"
+			value="Start Timer"
+			onclick="startTimer()">
+	<!-- Hide stopButton until timer starts -->
+	<input 	type="button" 
+			id="stopButton"
+			value="Stop Timer"
+			onclick="stopTimer()"
+			style="display:none">
+	<!-- Display the time elapsed (in seconds) -->
+	<p id="message">Time is an interesting thing...</p>
+
+	<!-- JavaScript code contains the program logic -->
+	<script>
+		// global variables
+		var startButton = document.getElementById("startButton");
+		var stopButton = document.getElementById("stopButton");
+		var message = document.getElementById("message");
+		var timeInitial, timeFinal;
+
+		/** This function is called when startButton is clicked. */
+		function startTimer() {
+			// console messages are used for debugging
+			console.log("startButton was clicked");
+			// timestamp at the time startTimer is called
+			var date = new Date();
+			// milliseconds since 1 January 1970
+			timeInitial = date.getTime();
+			// hide the start button on the web page
+			startButton.style.display = "none";
+			// display the stop button on the web page
+			stopButton.style.display = "block";
+			message.innerHTML = ("<p>Timer in progress...</p>");
+		}
+
+		/** This function is called when stopButton is clicked. */
+		function stopTimer() {
+			// console messages are used for debugging
+			console.log("stopButton was clicked");
+			// timestamp at the time sopTimer is called
+			var date = new Date();
+			// milliseconds since 1 January 1970
+			timeFinal = date.getTime();
+			// hide the start button on the web page
+			stopButton.style.display = "none";
+			// display the stop button on the web page
+			startButton.style.display = "block";
+			// display the time elapsed (in seconds)
+			var milliseconds = timeFinal - timeInitial;
+			var seconds = parseInt(milliseconds / 1000);
+			message.innerHTML = ("<p>Time Elapsed: " 
+				+ seconds + " seconds</p>");
+		}
+		function testFunction() {
+			// console messages are used for debugging
+			console.log("simpleTimer_v0.html was loaded");
+		}
+	</script>
+</body>
+</html> 
