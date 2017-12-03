@@ -1,0 +1,47 @@
+/* file: customStyles_v0.css date: 2-December-2017
+description: A cascading style sheet of custom style attributes. */
+body {
+	padding-top: 5%;
+	padding-left: 5%;
+	font-family: Helvetica, sans-serif;
+}
+.grayRoundedBox {
+	color: #303030;
+	padding: 2%;
+	background: #a0a0a0;
+	max-width: 300px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.greenRoundedBox {
+	margin-top: 2%;
+	background: #40ff50;
+	color: #303030;
+	font-size: 14pt;
+	padding: 2%;
+	max-width: 300px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+select {
+    padding: 2%;
+    margin: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    color:#303030;
+    cursor: pointer;
+}
+#startButton {
+	background: #40ff50;
+	color: #303030;
+	padding: 2%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
