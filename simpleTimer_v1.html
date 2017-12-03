@@ -1,0 +1,47 @@
+<!-- 	file: simpleTimer_v1.html date: 2-December-2017
+		description: Timer rings a bell at the end of a specific interval. -->
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Simple Timer (v1)</title>
+	<meta charset="utf-8">
+	<meta 	name="viewport" 
+			content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Include external Cascading Style Sheet -->
+	<link rel="stylesheet" type="text/css" href="customStyles_v0.css">
+</head>
+<body>
+	<!-- Include the external sound file for the bell. -->
+	<audio id="bellSound">
+  		<source src="bell_sound.wav" type="audio/mpeg">
+  		Your browser does not support the audio element.
+	</audio>
+	<div class="grayRoundedBox">
+		<h1>Simple Timer</h1>
+		<h3>Version 1.0</h3>
+		<p>A bell will sound at the end of the interval.</p>
+		<select id="menu">
+			<option value="1" selected> 1 minute </option>
+			<option value="2"> 2 minutes </option>
+			<option value="3"> 3 minutes </option>
+			<option value="5"> 5 minutes </option>
+			<option value="10"> 10 minutes </option>
+			<option value="15"> 15 minutes </option>
+			<option value="20"> 20 minutes </option>
+			<option value="30"> 30 minutes </option>
+		</select>
+		<input 	type="button" id="startButton"
+				value="Start Timer" onclick="startTimer()">
+	</div>
+	<div id="message" class="greenRoundedBox">
+		<p><em>
+			“The only reason for time is so that 
+			everything doesn't happen at once.”
+			<br>
+			- Albert Einstein
+		</em></p>
+	</div>
+	<!-- Include external JavaScript file -->
+	<script src="bellTimer.js"></script>
+</body>
+</html> 
